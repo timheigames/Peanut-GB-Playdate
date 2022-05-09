@@ -1,0 +1,5 @@
+name=peanutGB
+author=timhei
+description=Port of deltabeard's peanutGB emulator
+bundleID=com.timhei.peanutGB
+imagePath=peanutGBmenu

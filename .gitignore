@@ -1,0 +1,5 @@
+/cmake-build-*/
+/*.pdx/
+/Source/pdex.bin
+/Source/pdex.dll
+/Source/pdex.so
