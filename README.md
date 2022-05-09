@@ -8,6 +8,7 @@ A port of the Peanut-GB Gameboy emulator for Playdate. [Peanut-GB](https://githu
 - Download the pdx ZIP from the [Releases](https://github.com/timheigames/Peanut-GB-Playdate/releases) section.
 - Install it to your Playdate either through online sideloading or through USB and the Playdate Simulator.
 - You will have to place roms in either `Data/com.timhei.peanutgb/` (USB sideload), or `Data/user.xxx.peanutgb/` (website sideload).
+- To access the Data folder, plug your Playdate into a computer and hold `LEFT+MENU+LOCK` at the Playdate homescreen.
 - Roms must end in ".gb" or ".gbc", or they will not be recognized.
 - Gameboy Color is technically not supported, although sometimes games might be backwards compatible with the original Gameboy.
 
