@@ -78,7 +78,7 @@ char * rom_list_update()
     PDButtons pushed;
     pd->system->getButtonState(NULL, &pushed, NULL);
 
-    if(pushed) {
+    if(num_files > 0 && pushed) {
         if ( pushed & kButtonA ) {
             char *selected_file_copy = pd->system->realloc(NULL, (strlen(file_list[selected_file]) + 1) * sizeof(char));
             strcpy(selected_file_copy, file_list[selected_file]);
