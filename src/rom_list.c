@@ -44,7 +44,8 @@ void redraw_menu_screen() {
     pd->graphics->clear(kColorWhite);
 
     if(num_files == 0) {
-        pd->graphics->drawText("Place ROMs in \"Data/com.timhei.peanutGB\" folder", 47, kASCIIEncoding, 20, 110);
+        pd->graphics->drawText("Place ROMs in \"Data/com.timhei.peanutgb\" folder", 47, kASCIIEncoding, 20, 110);
+        pd->graphics->drawText("or \"Data/user.xxxx.peanutgb\" folder", 47, kASCIIEncoding, 65, 135);
     }
 
     for(int i = 0; i < 8; i++) {
@@ -78,7 +79,7 @@ char * rom_list_update()
     PDButtons pushed;
     pd->system->getButtonState(NULL, &pushed, NULL);
 
-    if(pushed) {
+    if(num_files > 0 && pushed) {
         if ( pushed & kButtonA ) {
             char *selected_file_copy = pd->system->realloc(NULL, (strlen(file_list[selected_file]) + 1) * sizeof(char));
             strcpy(selected_file_copy, file_list[selected_file]);
