@@ -1,4 +1,7 @@
 # Peanut-GB-Playdate
+
+![peanutGB_icon](https://user-images.githubusercontent.com/102014001/167331546-b2aa5516-1a8f-4131-8196-3599cc5fb73e.png)
+
 A port of the Peanut-GB Gameboy emulator for Playdate. [Peanut-GB](https://github.com/deltabeard/Peanut-GB) is a header-only C Gameboy emulator created by [deltabeard](https://github.com/deltabeard). I have tried to optimize as much as I could for Playdate, but most games still only run at 20-30 fps. Because the Gameboy ran at 60 fps, this means games will feel like you are playing at half speed or slower. This port has working audio, a rom picker, and save support (not save states).
 
 ## Installing
