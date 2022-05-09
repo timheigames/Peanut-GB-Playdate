@@ -3,5 +3,5 @@ author=timhei
 description=Port of deltabeard's Peanut-GB emulator
 bundleID=com.timhei.peanutgb
 imagePath=peanutGBmenu
-version=1.0
-buildNumber=100
+version=1.1
+buildNumber=110
