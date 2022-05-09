@@ -44,7 +44,8 @@ void redraw_menu_screen() {
     pd->graphics->clear(kColorWhite);
 
     if(num_files == 0) {
-        pd->graphics->drawText("Place ROMs in \"Data/com.timhei.peanutGB\" folder", 47, kASCIIEncoding, 20, 110);
+        pd->graphics->drawText("Place ROMs in \"Data/com.timhei.peanutgb\" folder", 47, kASCIIEncoding, 20, 110);
+        pd->graphics->drawText("or \"Data/user.xxxx.peanutgb\" folder", 47, kASCIIEncoding, 65, 135);
     }
 
     for(int i = 0; i < 8; i++) {
