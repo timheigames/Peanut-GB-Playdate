@@ -460,7 +460,7 @@ static int update(void* userdata)
         pd->graphics->markUpdatedRows(0, LCD_ROWS - 1);
     }
 
-    pd->system->drawFPS(0,0);
+    //pd->system->drawFPS(0,0);
     return 1;
 }
 
