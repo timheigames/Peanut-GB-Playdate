@@ -37,7 +37,7 @@ if (TOOLCHAIN STREQUAL "armgcc")
 	endif()
 	TARGET_SOURCES(${PLAYDATE_GAME_DEVICE} PRIVATE src/main.c src/rom_list.c
 			src/peanut_gb.h src/minigb_apu/minigb_apu.c src/minigb_apu/minigb_apu.h)
-	TARGET_INCLUDE_DIRECTORIES(${PLAYDATE_GAME_DEVICE} PRIVATE ../../)
+	TARGET_INCLUDE_DIRECTORIES(${PLAYDATE_GAME_DEVICE} PRIVATE src/)
 else()
 	add_library(${PLAYDATE_GAME_NAME} SHARED src/main.c)
 	if(NOT UNIX)
@@ -45,7 +45,7 @@ else()
 	endif()
 	TARGET_SOURCES(${PLAYDATE_GAME_NAME} PRIVATE src/main.c src/rom_list.c
 			src/peanut_gb.h src/minigb_apu/minigb_apu.c src/minigb_apu/minigb_apu.h)
-	TARGET_INCLUDE_DIRECTORIES(${PLAYDATE_GAME_NAME} PRIVATE ../../)
+	TARGET_INCLUDE_DIRECTORIES(${PLAYDATE_GAME_NAME} PRIVATE src/)
 endif()
 
 ADD_COMPILE_DEFINITIONS(ENABLE_SOUND)
