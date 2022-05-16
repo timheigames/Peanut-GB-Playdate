@@ -339,15 +339,16 @@ static void update_noise(int16_t *restrict left, int16_t *restrict right, int le
 
 int audio_callback_playdate(void *context, int16_t *left, int16_t *right, int len)
 {
-	memset(left, 0, len);
-	memset(right, 0, len);
-
 	update_square(left, right, 0, len);
 	update_square(left, right, 1, len);
 	update_wave(left, right, len);
 	update_noise(left, right, len);
 
-	return 1;
+    for(int i = 0; i < len; ++i) {
+        if(left[i] != 0 || right[i] != 0) return 1;
+    }
+
+	return 0;
 }
 
 static void chan_trigger(uint_fast8_t i)
