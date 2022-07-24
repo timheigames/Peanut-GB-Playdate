@@ -9,7 +9,7 @@ int num_files = 0;
 int selected_file = 0;
 LCDFont* font;
 
-void *file_list_callback(const char *filename, void *userdata)
+void file_list_callback(const char *filename, void *userdata)
 {
     int len = strlen(filename);
     if (strcmp(filename + len - 3, ".gb") == 0 || strcmp(filename + len - 4, ".gbc") == 0) {
@@ -28,7 +28,7 @@ void rom_list_init()
     font = pd->graphics->loadFont("Asheville-Sans-14-Bold", NULL);
     pd->graphics->setFont(font);
     file_list = pd->system->realloc(NULL, max_files * sizeof(char*));
-    pd->file->listfiles(".", file_list_callback, NULL);
+    pd->file->listfiles(".", file_list_callback, NULL, 0);
 
     if(num_files == 0) {
         pd->file->open("place_roms_here.txt", kFileWrite);
