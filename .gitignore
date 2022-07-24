@@ -4,3 +4,11 @@
 /Source/pdex.dll
 /Source/pdex.so
 /.idea/
+.vscode
+
+CMakefiles/
+CMakeFiles/*
+build/
+
+# commit no ROMs
+*.gb

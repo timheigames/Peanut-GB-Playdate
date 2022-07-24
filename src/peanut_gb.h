@@ -44,6 +44,10 @@
 #	define ENABLE_SOUND 1
 #endif
 
+#ifdef ENABLE_SOUND
+#include "minigb_apu/minigb_apu.h"
+#endif
+
 /* Enable LCD drawing. On by default. May be turned off for testing purposes. */
 #ifndef ENABLE_LCD
 #	define ENABLE_LCD 1
@@ -97,8 +101,8 @@
 #define SERIAL_CYCLES		4096
 
 /* Calculating VSYNC. */
-#define DMG_CLOCK_FREQ		4194304.0
-#define SCREEN_REFRESH_CYCLES	70224.0
+#define DMG_CLOCK_FREQ		4194304.0f
+#define SCREEN_REFRESH_CYCLES	70224.0f
 #define VERTICAL_SYNC		(DMG_CLOCK_FREQ/SCREEN_REFRESH_CYCLES)
 
 /* SERIAL SC register masks. */

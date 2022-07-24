@@ -34,7 +34,7 @@ struct priv_t priv =
         .rom = NULL,
         .cart_ram = NULL
     };
-const double target_speed_ms = 1000.0 / VERTICAL_SYNC;
+const double target_speed_ms = (double)1000.0 / (double)VERTICAL_SYNC;
 double speed_compensation = 0.0;
 uint_fast32_t new_ticks, old_ticks;
 enum gb_init_error_e gb_ret;
@@ -184,8 +184,8 @@ void gb_error(struct gb_s *gb, const enum gb_error_e gb_err, const uint16_t val)
 /**
  * Draws scanline into framebuffer.
  */
-void lcd_draw_line(struct gb_s *gb, const uint8_t pixels[160],
-		   const uint_least8_t line)
+void lcd_draw_line(struct gb_s *gb, const uint8_t* pixels,
+		   const uint_fast8_t line)
 {
 	struct priv_t *priv = gb->direct.priv;
 
